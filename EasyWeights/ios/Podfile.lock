@@ -223,6 +223,14 @@ PODS:
     - React
   - RNCAsyncStorage (1.7.1):
     - React
+  - RNCMaskedView (0.1.5):
+    - React
+  - RNGestureHandler (1.5.3):
+    - React
+  - RNReanimated (1.4.0):
+    - React
+  - RNScreens (2.0.0-alpha.22):
+    - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -256,6 +264,10 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeLocalization (from `../node_modules/react-native-localization`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -317,6 +329,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-localization"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-community/masked-view"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -349,6 +369,10 @@ SPEC CHECKSUMS:
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeLocalization: 9abfb1717d6c6f2e3a4e444c4402d52acbf784cc
   RNCAsyncStorage: 8539fc80a0075fcc9c8e2dff84cd22dc5bf1dacf
+  RNCMaskedView: c8b53164b85ecf94c9a44d67082df0f03c1f74cc
+  RNGestureHandler: 02905abe54e1f6e59c081a10b4bd689721e17aa6
+  RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
+  RNScreens: 6adf01eb4080f44af6cca551207c6b0505066857
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: fa63c6c7ae00247c605b16ea57c9ca96749e1e00
