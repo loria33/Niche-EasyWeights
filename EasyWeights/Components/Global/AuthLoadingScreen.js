@@ -1,7 +1,7 @@
 import React from 'react';
+import * as AuthActions from '../../Actions/AuthActions';
+
 import {
-  ActivityIndicator,
-  AsyncStorage,
   StatusBar,
   Text,
   View,
@@ -15,7 +15,10 @@ class AuthLoadingScreen extends React.Component {
   // Fetch the token from storage then navigate to our appropriate place
   _bootstrapAsync = async () => {
     const userToken = 1
-    this.props.navigation.navigate(userToken == 1 ? 'App' : 'Auth');
+    
+    const isConnected = true;
+
+    this.props.navigation.navigate(isConnected? 'App' : 'Auth');
   };
 
   // Render any loading content that you like here

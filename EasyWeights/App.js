@@ -7,22 +7,21 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {Provider} from 'react-redux';
+import configurestore from './configurestore';
+import { SafeAreaView,StyleSheet,ScrollView,View,Text,StatusBar } from 'react-native';
 import Screens from './Navigation/Screens';
+
+const store = configurestore();
 
 export default class App extends React.Component {
     render() {
           return (
-          <View style={{flex:1}}>
-            <Screens />
-          </View>
+          <Provider store={store}>
+              <View style={{flex:1}}>
+                <Screens />
+              </View>
+          </Provider>
       );
     }
 }

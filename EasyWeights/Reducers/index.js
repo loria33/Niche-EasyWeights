@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+import AuthReducer from '../Reducers/AuthReducer';
 
 const rootReducer = (state, action) => {
    
@@ -11,7 +12,7 @@ const rootReducer = (state, action) => {
   }
   
 const appReducer = combineReducers({
-    conversations : ConversationReducer,
+    authreducer : AuthReducer,
 })
 
 export default rootReducer;

@@ -21,7 +21,15 @@ const AppStack = createStackNavigator(
       screen: Home,
       navigationOptions: ({ navigation }) => {
         return {
-          headerShown: true
+          headerShown: true,
+          title: 'EasyWeights',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
         };
       }
     },
@@ -43,7 +51,15 @@ const AuthStack = createStackNavigator(
       screen: Login,
       navigationOptions: ({ navigation }) => {
         return {
-          headerShown: true
+          
+          title: 'EasyWeights',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
         };
       }
     }

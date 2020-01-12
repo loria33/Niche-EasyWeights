@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from './Reducers'
 import reduxImutableStateInvariant from 'redux-immutable-state-invariant';
 
+let store;
 
 export default function configureStore(preloadedState) {
   const middlewares =process.env.NODE_ENV !== 'production' ?

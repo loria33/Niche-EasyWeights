@@ -2,7 +2,7 @@
 
 'use strict'
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import {useActions} from 'react-redux';
 import { Alert, Image, TouchableOpacity, Text, View, ScrollView, Animated, ActivityIndicator } from 'react-native';
 import NavigationService from '../../Navigation/NavigationService';
 import { NavigationActions, withNavigation, SafeAreaView } from 'react-navigation';
