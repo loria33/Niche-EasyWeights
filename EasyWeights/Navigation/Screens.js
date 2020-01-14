@@ -6,6 +6,8 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 //App stack//
 import Home from '../Components/Views/Home';
 import Profile from '../Components/Views/Profile';
+import Payments from '../Components/Views/Payments';
+//Global
 import AuthLoadingScreen from '../Components/Global/AuthLoadingScreen'
 //Auth stack//
 import Login from '../Components/Views/Login';
@@ -22,7 +24,23 @@ const AppStack = createStackNavigator(
       navigationOptions: ({ navigation }) => {
         return {
           headerShown: true,
-          title: 'EasyWeights',
+          title: 'Home',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        };
+      }
+    },
+    Payments: {
+      screen: Payments,
+      navigationOptions: ({ navigation }) => {
+        return {
+          headerShown: true,
+          title: 'Checkout',
           headerStyle: {
             backgroundColor: '#f4511e',
           },

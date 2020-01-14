@@ -7,17 +7,15 @@ let _store = null;
 
 function setTopLevelNavigator(navigatorRef,store) {
   _navigator = navigatorRef;
-  _store = store;
 }
 
 function navigate(routeName, params) {
-  _store.dispatch(setCurrentRoute(routeName));
-  _navigator.dispatch(
+    debugger;
     NavigationActions.navigate({
       routeName,
       params,
-    })
-  );
+    });
+ 
 }
 
 const closeDrawer = () => {
