@@ -34,6 +34,16 @@ target 'EasyWeights' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'Stripe', '~> 14.0.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Crash'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Performance'
+  pod 'Firebase/Storage'
+
   target 'EasyWeightsTests' do
     inherit! :search_paths
     # Pods for testing

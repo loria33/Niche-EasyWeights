@@ -63,7 +63,6 @@ class PersistantStorage {
 
     async initAppPersist() {
         try {
-           // alert('PersistantStorage:87')
             return await Promise.all([this.loadAccessToken()])
                  .then((promisesList) => {
                   

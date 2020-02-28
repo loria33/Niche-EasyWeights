@@ -10,10 +10,9 @@ function setTopLevelNavigator(navigatorRef,store) {
 }
 
 function navigate(routeName, params) {
-    debugger;
+  
     NavigationActions.navigate({
-      routeName,
-      params,
+      routeName
     });
  
 }
