@@ -21,6 +21,12 @@ class Payments extends Component {
   }
   state = { useLiteCreditCardInput: false };
   
+  sendPaymentToStripe(amount,currency,token) {
+    debugger;
+    this.props.actions.makePayment(amount,currency,token.tokenId);
+  }
+
+
   async sendPayment(formData) {
     debugger;
     const params = {
@@ -41,6 +47,11 @@ class Payments extends Component {
     }
     
       const token = await stripe.createTokenWithCard(params);
+      if(token) {
+        debugger;
+        this.props.actions.savePaymentToken(token);
+        this.sendPaymentToStripe(50,'usd',token)
+      }
       console.log('token' + token);
   }
 
@@ -50,10 +61,10 @@ class Payments extends Component {
         this.props.actions.saveCurrentCC(formData);
         this.props.actions.showPaymentReadyButton(true)
     }
-    else{
-      this.props.actions.resetCurrentCC(true);
-      this.props.actions.showPaymentReadyButton(false)
-    }
+    // else{
+    //   this.props.actions.resetCurrentCC(true);
+    //   this.props.actions.showPaymentReadyButton(false)
+    // }
      
    }
 

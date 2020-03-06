@@ -2,7 +2,8 @@ import * as PaymentTypes from '../ActionTypes/PaymentTypes';
 
 const initialState = {
     showButtonFlag: false,
-    ccFormData: {}
+    ccFormData: {},
+    token:{},
 };
 
 const PaymentsReducer = (state = initialState, action) => {
@@ -21,8 +22,14 @@ const PaymentsReducer = (state = initialState, action) => {
       case PaymentTypes.ON_DONE_CC_ENTRY_INVALID:
       return {
         ...state,
-        ccFormData: {}
+        ccFormData: {},
+        token:{}
       }
+      case PaymentTypes.ON_SAVE_PAYMENT_TOKEN:
+        return {
+          ...state,
+          token: action.token
+        }
     
     default:
       return state;

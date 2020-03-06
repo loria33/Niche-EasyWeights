@@ -1,24 +1,24 @@
-import Config from '../Consts/Config';
-import configureStore from '../store/configurestore';
-import * as GlobalActionTypes from '../Consts/GlobalActionTypes';
+import Config from '../Config/config';
+import configureStore from '../configurestore';
+//import * as GlobalActionTypes from '../Consts/GlobalActionTypes';
 import _ from 'lodash';
 
 const store = configureStore();
 
 const FetchHelper = {
     async execute(methodName, dynamicUrlData, bodyData) {
+        debugger;
         let methodObject = Config.methods[methodName];
         let headers = {
         };
 
-        if (methodObject.isAuthenticated)
-            headers['Authorization'] = 'Bearer ' + store.getState().auth.accToken;
-
         if (methodObject.jsonMethod)
             headers['Content-Type'] = 'application/json';
 
-        if (methodObject.showLoader)
-            store.dispatch(GlobalActionTypes.AJAX_BEGIN_LOADER);
+        if (methodObject.showLoader){
+            //store.dispatch(GlobalActionTypes.AJAX_BEGIN_LOADER);
+        }
+           
 
         let request = {
             method: methodObject.verb,
@@ -35,8 +35,12 @@ const FetchHelper = {
                 return dynamicUrlData[val];
             });
         });
+        let url = '';
+        if(methodObject.url ='payment')
+            url = Config.paymentUrl;
+        else
+            url = Config.baseUrl + parsedUrl;
 
-        let url = Config.baseUrl + parsedUrl;
         if (methodObject.verb == "POST" || methodObject.verb == "PUT")
             request.body = JSON.stringify(bodyData);
 

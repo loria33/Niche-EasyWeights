@@ -8,11 +8,12 @@ const functions = require('firebase-functions');
 // });
 // eslint-disable-file no-use-before-define 
 
-const functions = require('firebase-functions');
-const stripe = require('stripe')('XXXXXXXXXXXXXXXXXXXXXXXXX');
+
 // eslint-disable-next-line promise/always-return
 exports.completePaymentWithStripe = functions.https.onRequest((request, response) => {
-
+        console.log('easyweights');
+        const stripe = require('stripe')('sk_test_uEbyBwUmO5yez807zlOTE2yt00OsDeC6jp');
+        console.log('Request params:'+ request.body.amount + ' ' + request.body.currency);
         stripe.charges
         .create({
             amount:request.body.amount,
@@ -21,11 +22,13 @@ exports.completePaymentWithStripe = functions.https.onRequest((request, response
         })
         // eslint-disable-next-line promise/always-return
         .then(charges => {
+            console.log('easyweights in then');
+            console.log('easyweights' + charges);
             response.send(charges);
-            return null;
         })
 
         .catch(err => {
+            console.log('easyweights in catch');
             console.log(err);
         });
     }

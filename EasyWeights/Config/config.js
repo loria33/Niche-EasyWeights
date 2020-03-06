@@ -1,15 +1,15 @@
 const Config = {
     
     stripepublishableKey: 'pk_test_a8VqowyWFwi6RuKPLz7RdErZ00ipUYlvH4',
-    baseUrl : 'https://api.comg.io/v1',
+    baseUrl : '',
+    paymentUrl:'https://us-central1-easyweights-316db.cloudfunctions.net/completePaymentWithStripe',
     methods : {
-        conversationGroups : {
-            description: "Get conversation list for user per org",
-            isAuthenticated : true,
-            verb : 'GET',
-            sendDeviceKey : true,
+        makePayment : {
+            url:'payment',
+            description: "make payment with CC",
+            verb : 'POST',
             jsonMethod : true,
-            suffixUrl : '/conversations',
+            suffixUrl : '',
             showLoader : true,
             isFlatResponse: false
         },
