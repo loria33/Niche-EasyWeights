@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions, TouchableOpacity,View,Text } from 'react-native';
+import { StyleSheet, Dimensions, TouchableOpacity,View,Text,Image } from 'react-native';
 import NavigationService from '../../Navigation/NavigationService'
 import {useActions} from 'react-redux';
 
@@ -9,10 +9,26 @@ class Home extends React.Component {
  
   constructor() {
     super();
-    
     this.gotoPayments = this.gotoPayments.bind(this);
-
   }
+  
+  static navigationOptions = ({ navigation, screenProps }) => ({
+    headerTitle:'Easy Weights',
+    
+    headerStyle: {
+        backgroundColor: '#00adee',
+        elevation: 0,
+        shadowOpacity: 0,
+        borderBottomWidth: 0,
+        height:60,
+      },
+    headerLeft: () =>
+      
+      <TouchableOpacity style={{ paddingLeft: 20,marginBottom:5}} onPress={() => navigation.openDrawer()}>
+            <Image style={{  width:25,height:25}} source={require('../../Assets/Icons/menu-icon.png')} />
+        </TouchableOpacity>
+    
+  });
 
   gotoPayments = () => {
     this.props.navigation.navigate('Payments');
@@ -20,7 +36,6 @@ class Home extends React.Component {
   render(){
     return (
       <View style={styles.home}>
-          <Text>Home screen</Text>
           <TouchableOpacity onPress={() => this.gotoPayments()}>
                <Text>Go to Payments</Text>
           </TouchableOpacity>
