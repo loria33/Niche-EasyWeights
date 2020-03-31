@@ -9,7 +9,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import configurestore from './configurestore';
-import { SafeAreaView,StyleSheet,View } from 'react-native';
+import {ImageBackground,StyleSheet,View} from 'react-native';
 import Screens from './Navigation/Screens';
 
 const store = configurestore();
@@ -20,13 +20,13 @@ export default class App extends React.Component {
           return (
           <Provider store={store}>
               <View style={{flex:1}}>
-                <Screens />
+                  <Screens />
               </View>
           </Provider>
       );
     }
 }
 const styles = StyleSheet.create({
-  
+ 
 });
 

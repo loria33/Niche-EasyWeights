@@ -5,7 +5,9 @@ const CommonHelper =  {
 	TrimStrings(str) {
 		return str.trim();
     },
-
+	findDuplicates(substringArr) {
+		return substringArr.filter((item,index) => substringArr.imdexOf(item) !== index)
+	},
 	getAlert(){
 		alert('asdasdasd');
 	},
@@ -72,100 +74,10 @@ const CommonHelper =  {
 			// grey - #a1a1a1
 			//blue - #0173a2
 	},
-	calculateMessageType(C,E,S,myOrgFets,myAllowedFets) {
-			let num  = 0;
-		
-			requestAlertTypes=[];
-			const EX = '00000000-0000-0000-0000-000000000000'
-
-			if(E != '#00adee' && C != '#00adee' && S != '#00adee')
-				return requestAlertTypes
-				
-			if(E == '#00adee')
-			{
-				myAllowedFets.SendEmailMessage && myOrgFets.SendEmailMessage?requestAlertTypes.push(myAllowedFets.SendEmailMessage[0].toString()):requestAlertTypes.push(EX)
-			}
-			else {
-				requestAlertTypes.push(EX)
-			}
-			if(C == '#00adee')
-			{
-				myAllowedFets.SendPushMessage  && myOrgFets.SendPushMessage?requestAlertTypes.push(myAllowedFets.SendPushMessage[0].toString()):requestAlertTypes.push(EX)
-			}
-			else {
-				requestAlertTypes.push(EX)
-			}
-			
-			if(S == '#00adee')
-			{
-				myAllowedFets.SendSmsMessage && myOrgFets.SendSmsMessage?requestAlertTypes.push(myAllowedFets.SendSmsMessage[0].toString()):requestAlertTypes.push(EX)
-			}
-			else {
-				requestAlertTypes.push(EX)
-			}
-
-			return requestAlertTypes;
-	},
-
-	calculateFetsType(p,s,e,myOrgFets) {
-		let num  = 0;
-		
-			fetsTypes=[];
-			const EX = '00000000-0000-0000-0000-000000000000'
-
-			if(p == false && s == false &&  e == false)
-				return fetsTypes
-
-			else {
-					if(p)
-					{
-						fetsTypes.push(myOrgFets.ReceivePush[0].toString());
-					}
-					else {
-						fetsTypes.push(EX)
-					}
-					if(s)
-					{
-						fetsTypes.push(myOrgFets.ReceiveSms[0].toString());
-					}
-					else {
-						fetsTypes.push(EX)
-					}
-					if(e)
-					{
-						fetsTypes.push(myOrgFets.ReceiveEmail[0].toString());
-					}
-					else {
-						fetsTypes.push(EX)
-					}
-			}
-			return fetsTypes;
-
-	},
-	messageVia(C,E,S,align) {
-		let num  = 0;
 	
-		messageVia=[];
-		const EX = '0'
 
-		if(E != '#00adee' && C != '#00adee' && S != '#00adee')
-			return  '';
-		
-		if(E == '#00adee')
-		{
-			messageVia.push(align=='left'?'Email':'מייל')
-		}
-		if(C == '#00adee')
-		{
-			messageVia.push(align=='left'?'Push Notification':'תשגורת')	
-		}
-		if(S == '#00adee')
-		{
-			messageVia.push(align=='left'?'SMS':'הודעה')	
-		}
 	
-		return messageVia.toString();
-},
+	
 }
 export default CommonHelper;
 

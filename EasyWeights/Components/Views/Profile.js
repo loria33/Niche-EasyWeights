@@ -9,6 +9,7 @@ class Profile extends React.Component {
     return (
       <View flex center style={styles.home}>
           <Text>Profile screen</Text>
+          <Text>MyBar</Text>
       </View>
     );
   }

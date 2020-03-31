@@ -72,7 +72,7 @@ const AuthStack = createStackNavigator(
           
           title: 'EasyWeights',
           headerStyle: {
-            backgroundColor: '#f4511e',
+            backgroundColor: 'red',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {

@@ -47,6 +47,7 @@ class Payments extends Component {
     }
     
       const token = await stripe.createTokenWithCard(params);
+
       if(token) {
         debugger;
         this.props.actions.savePaymentToken(token);
@@ -60,12 +61,7 @@ class Payments extends Component {
     if(formData.valid) {
         this.props.actions.saveCurrentCC(formData);
         this.props.actions.showPaymentReadyButton(true)
-    }
-    // else{
-    //   this.props.actions.resetCurrentCC(true);
-    //   this.props.actions.showPaymentReadyButton(false)
-    // }
-     
+    } 
    }
 
  //_onFocus = (field) => console.log("focusing", field);
@@ -75,15 +71,15 @@ class Payments extends Component {
     let ccFormDat = this.props.paymentsreducer.ccFormData;
 
     return (
-      <View style={s.container}>
+      <View style={styles.container}>
             <CreditCardInput
               autoFocus={false}
               requiresName
               requiresCVC
               equiresPostalCode
               cardScale={1}
-              labelStyle={s.label}
-              inputStyle={s.input}
+              labelStyle={styles.label}
+              inputStyle={styles.input}
               validColor={"black"}
               invalidColor={"red"}
               placeholderColor={"darkgray"}
@@ -91,9 +87,11 @@ class Payments extends Component {
               onFocus={this._onFocus}
               onChange={this._onChange} />
               {this.props.paymentsreducer.showButtonFlag?
-              <TouchableOpacity onPress={(ccFormDat) => this.sendPayment(ccFormDat)} style={s.buttonContainer}>
+              <View style={styles.gotoPaymentsParentView}>
+              <TouchableOpacity onPress={(ccFormDat) => this.sendPayment(ccFormDat)} style={styles.gotoPaymentsView}>
                   <Text>Done</Text>
-              </TouchableOpacity>:null}
+              </TouchableOpacity>
+              </View>:null}
       </View>
     );
   }
@@ -118,7 +116,7 @@ Payments.defaultProps = {
   iconSize: 20,
  };
 
-const s = StyleSheet.create({
+const styles = StyleSheet.create({
   switch: {
     alignSelf: "center",
     marginTop: 20,
@@ -140,5 +138,24 @@ const s = StyleSheet.create({
     fontSize: 16,
     color: "black",
   },
+  gotoPayments: {
+    color:'#e9205cAA',
+    fontSize:20,
+  },
+  gotoPaymentsParentView: {
+    width:'100%',
+    flex:0,
+    marginTop:20,
+    marginBottom:20,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  gotoPaymentsView: {
+    backgroundColor:'white',
+    width:'80%',
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'white',
+  }
 });
 

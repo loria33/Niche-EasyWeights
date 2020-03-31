@@ -398,10 +398,10 @@ PODS:
     - React
   - RNScreens (2.0.0-alpha.22):
     - React
-  - Stripe (14.0.0)
-  - tipsi-stripe (7.5.1):
+  - Stripe (14.0.1)
+  - tipsi-stripe (7.5.3):
     - React
-    - Stripe (~> 14.0.0)
+    - Stripe (~> 14.0.1)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -607,8 +607,8 @@ SPEC CHECKSUMS:
   RNGestureHandler: 02905abe54e1f6e59c081a10b4bd689721e17aa6
   RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
   RNScreens: 6adf01eb4080f44af6cca551207c6b0505066857
-  Stripe: db29ad197c74aca6fb981e4e8355cf7ebd0fca5a
-  tipsi-stripe: 3e0073c7eec0b2bfd1d1d5736d843c22e3024485
+  Stripe: 4305b646743612854819fb5d5cf67aaeb93577c0
+  tipsi-stripe: 41299d30e9b906413315eeb1b94607aaac9b6781
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: 0e26165a8a354db08f9a8cc01aa84be760235ad7
