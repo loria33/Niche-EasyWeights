@@ -22,13 +22,10 @@ exports.completePaymentWithStripe = functions.https.onRequest((request, response
         })
         // eslint-disable-next-line promise/always-return
         .then(charges => {
-            console.log('easyweights in then');
-            console.log('easyweights' + charges);
             response.send(charges);
         })
 
         .catch(err => {
-            console.log('easyweights in catch');
             console.log(err);
         });
     }

@@ -28,23 +28,24 @@ class Payments extends Component {
 
 
   async sendPayment(formData) {
-    debugger;
-    const params = {
-      // mandatory
-      number: '4242424242424242',
-      expMonth: 11,
-      expYear: 22,
-      cvc: '223',
-      // optional
-      name: 'Test User',
-      currency: 'usd',
-      addressLine1: '123 Test Street',
-      addressLine2: 'Apt. 5',
-      addressCity: 'Test City',
-      addressState: 'Test State',
-      addressCountry: 'Test Country',
-      addressZip: '20852',
-    }
+   
+    if(this.props.paymentsreducer.token.tokenId == undefined) {
+      const params = {
+        // mandatory
+        number: '4242424242424242',
+        expMonth: 11,
+        expYear: 22,
+        cvc: '223',
+        // optional
+        name: 'Test User',
+        currency: 'usd',
+        addressLine1: '123 Test Street',
+        addressLine2: 'Apt. 5',
+        addressCity: 'Test City',
+        addressState: 'Test State',
+        addressCountry: 'Test Country',
+        addressZip: '20852',
+      }
     
       const token = await stripe.createTokenWithCard(params);
 
@@ -54,6 +55,7 @@ class Payments extends Component {
         this.sendPaymentToStripe(50,'usd',token)
       }
       console.log('token' + token);
+    }
   }
 
   _onChange = (formData) => {
@@ -90,6 +92,8 @@ class Payments extends Component {
               <View style={styles.gotoPaymentsParentView}>
               <TouchableOpacity onPress={(ccFormDat) => this.sendPayment(ccFormDat)} style={styles.gotoPaymentsView}>
                   <Text>Done</Text>
+                  {this.props.paymentsreducer.token.tokenId != undefined?
+                  <Text>{'Token:' + this.props.paymentsreducer.token.tokenId}</Text>:null}
               </TouchableOpacity>
               </View>:null}
       </View>
