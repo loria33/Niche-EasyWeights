@@ -6249,10 +6249,10 @@ time-stamp@^1.0.0:
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
   integrity sha1-dkpaEa9QVhkhsTPztE5hhofg9cM=
 
-tipsi-stripe@^7.5.1:
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/tipsi-stripe/-/tipsi-stripe-7.5.1.tgz#529434e0bbd0510eef68f6b1ff46c6d30f5a672f"
-  integrity sha512-dSdyY/1GR5JmmddS9K8nBR3bAkNhBsMpUGKjAuyXvyHOXJIwkdzuWDa86yMLPAC+JLBP4HzB2cIuEYH4A6KI4g==
+tipsi-stripe@^7.5.3:
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/tipsi-stripe/-/tipsi-stripe-7.5.3.tgz#dbfccf1aeb4d881091ad5c2ae69cd433169c3097"
+  integrity sha512-KL6kDAwfHPWVpKrzMeFovLGC7uoJL/PBvzjdwy7e6aEFUiBXW+1RuAd7be7JVwSePnqkkXDKcWtJZLLLMvqsRw==
 
 tmp@^0.0.33:
   version "0.0.33"
@@ -6371,9 +6371,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-es@^3.1.9:
   version "3.3.9"
