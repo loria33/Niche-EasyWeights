@@ -15,7 +15,7 @@
     "@react-native-community/masked-view": "^0.1.5",
     "lodash": "^4.17.15",
     "react": "16.9.0",
-    "react-native": "0.61.5",
+    "react-native": "0.62.3",
     "react-native-gesture-handler": "^1.5.3",
     "react-native-input-credit-card": "^0.5.0",
     "react-native-localization": "^2.1.6",
